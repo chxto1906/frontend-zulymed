@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css");
+
+@font-face {
+font-family: 'Myriad Pro Regular' !important;
+font-style: normal;
+font-weight: normal;
+src: local('Myriad Pro Regular'), url('fonts/MYRIADPRO-REGULAR.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Myriad Pro Condensed' !important;
+font-style: normal;
+font-weight: normal;
+src: local('Myriad Pro Condensed'), url('fonts/MYRIADPRO-COND.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Myriad Pro Condensed Italic' !important;
+font-style: normal;
+font-weight: normal;
+src: local('Myriad Pro Condensed Italic'), url('fonts/MYRIADPRO-CONDIT.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Myriad Pro Light' !important;
+font-style: normal;
+font-weight: normal;
+src: local('Myriad Pro Light'), url('fonts/MyriadPro-Light.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Myriad Pro Semibold' !important;
+font-style: normal;
+font-weight: normal;
+src: local('Myriad Pro Semibold'), url('fonts/MYRIADPRO-SEMIBOLD.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Myriad Pro Semibold Italic' !important;
+font-style: normal;
+font-weight: normal;
+src: local('Myriad Pro Semibold Italic'), url('fonts/MYRIADPRO-SEMIBOLDIT.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Myriad Pro Bold Condensed' !important;
+font-style: normal;
+font-weight: normal;
+src: local('Myriad Pro Bold Condensed'), url('fonts/MYRIADPRO-BOLDCOND.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Myriad Pro Bold' !important;
+font-style: normal;
+font-weight: normal;
+src: local('Myriad Pro Bold'), url('fonts/MYRIADPRO-BOLD.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Myriad Pro Bold Italic' !important;
+font-style: normal;
+font-weight: normal;
+src: local('Myriad Pro Bold Italic'), url('fonts/MYRIADPRO-BOLDIT.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Myriad Pro Bold Condensed Italic' !important;
+font-style: normal;
+font-weight: normal;
+src: local('Myriad Pro Bold Condensed Italic'), url('fonts/MYRIADPRO-BOLDCONDIT.woff') format('woff');
+}
+
+
+
+body, html {
+    font-family:'Myriad Pro Regular' !important;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.overlay {
+    position: relative; 
+}
+
+/* 1024 -1 so it doesnt show when it hits 1024px */
+@media only screen and (max-width: 1023px) {
+    .overlay:after {
+        content: " ";
+        z-index: 29;
+        display: block;
+        height: 100%;
+        top: 30px;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        pointer-events: none;
+        position: fixed;
+    }
+}
